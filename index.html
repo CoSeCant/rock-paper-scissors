@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Rock vs. Paper vs. Scissors</title>
+  <title>Rock Paper Scissors</title>
   <script src="javascript.js"></script> 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,16 +12,16 @@
     </div>
     <div class="body">
         <ul class="options">
-            <li><button class="rock"><img src="images/rock.png"></button></li>
-            <li><button class="paper"><img src="images/paper.png"></button></li>
-            <li><button class="scissors"><img src="images/scissors.png"></button></li>
+            <li><button onclick="Decision('Rock')" class="rock"><img src="images/rock.png"></button></li>
+            <li><button onclick="Decision('Paper')" class="paper"><img src="images/paper.png"></button></li>
+            <li><button onclick="Decision('Scissors')" class="scissors"><img src="images/scissors.png"></button></li>
         </ul>
         <div class="gamemode">
             <h2>HOW MANY ROUNDS SHALL WE PLAY?</h2>
             <div>
-                <button class="game-options">BEST OF 3</button>
-                <button class="game-options">BEST OF 5</button> 
-                <button class="game-options">BEST OF 7</button>
+                <button onclick="Rounds(2)" class="game-options">BEST OF 3</button>
+                <button onclick="Rounds(3)" class="game-options">BEST OF 5</button> 
+                <button onclick="Rounds(4)" class="game-options">BEST OF 7</button>
             </div>
         </div>
         <div class="scoreboard">
