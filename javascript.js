@@ -6,6 +6,7 @@ var userWins = 0
 var computerWins = 0 
 var round = 0
 var roundResult = ""
+var gamesNeeded
 
 for (let i = 0; i < rounds; i++) {
     function random() {
@@ -24,9 +25,15 @@ for (let i = 0; i < rounds; i++) {
 }
 
 function Rounds(number) {
-    winsNeeded = number
-    document.getElementById("round-choice").innerHTML = `You have chosen a best of ${winsNeeded}. Good luck!`;
-    console.log(gamesNeeded)
+    gamesNeeded = number
+    document.getElementById("round-choice").innerHTML = `You have chosen a best of ${gamesNeeded}. Good luck!`;
+    if (number === 3) {
+        winsNeeded = 2
+    } else if (number === 5) {
+        winsNeeded = 3
+    } else if (number === 7) {
+        winsNeeded = 4
+    }
 }
 
 
@@ -61,11 +68,12 @@ function Decision(hand) {
         roundResult = "You tied that round"
     } 
     round += 1
-    document.getElementById("round-result").innerHTML = roundResult;
     if (userWins === winsNeeded) {
-        alert(`You succesfully conquered the computer with a final score of: ${userWins} to ${computerWins}`)
+        document.getElementById("round-result").innerHTML = `You succesfully conquered the computer with a final score of: ${userWins} to ${computerWins}`;
     } else if (computerWins === winsNeeded) {
-        alert(`Unfortunately the computer has beat you by a final score of: ${computerWins} to ${userWins}`)
+        document.getElementById("round-result").innerHTML = `Unfortunately the computer has beat you by a final score of: ${computerWins} to ${userWins}`;
+    } else {
+        document.getElementById("round-result").innerHTML = roundResult;
     }
 }
 
