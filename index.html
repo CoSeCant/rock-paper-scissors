@@ -11,26 +11,33 @@
         <h1>Rock Paper Scissors</h1>
     </div>
     <div class="body">
+        <div class="gamemode">
+            <h2>HOW MANY ROUNDS SHALL WE PLAY?</h2>
+            <div>
+                <button onclick="Rounds(3)" class="game-options">BEST OF 3</button>
+                <button onclick="Rounds(5)" class="game-options">BEST OF 5</button> 
+                <button onclick="Rounds(7)" class="game-options">BEST OF 7</button>
+            </div>
+            <p id="round-choice"></p>
+        </div>
         <ul class="options">
             <li><button onclick="Decision('Rock')" class="rock"><img src="images/rock.png"></button></li>
             <li><button onclick="Decision('Paper')" class="paper"><img src="images/paper.png"></button></li>
             <li><button onclick="Decision('Scissors')" class="scissors"><img src="images/scissors.png"></button></li>
         </ul>
-        <div class="gamemode">
-            <h2>HOW MANY ROUNDS SHALL WE PLAY?</h2>
-            <div>
-                <button onclick="Rounds(2)" class="game-options">BEST OF 3</button>
-                <button onclick="Rounds(3)" class="game-options">BEST OF 5</button> 
-                <button onclick="Rounds(4)" class="game-options">BEST OF 7</button>
-            </div>
-        </div>
         <div class="scoreboard">
-            <h3 class="round-result">YOU WON! TIED! YOU LOST</h3>
+            <p id="round-result"></p>
             <div class="scores">
-                <h3 class="user-score">YOUR SCORE</h3>
-                <h3 class="computer-score">OPPONENT SCORE</h3>
+                <div class="user-score">
+                    <h3>YOUR SCORE</h3>
+                    <p id="user-score">0</p>
+                </div>
+                <div class="computer-score">
+                    <h3>OPPONENT SCORE</h3>
+                    <p id="comp-score">0</p>
+                </div>
             </div>
-            <h3 class="final-result">_______</h3>
+            <!--<h3 class="final-result">_______</h3>-->
         </div>
     </div>
 </body>

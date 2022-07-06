@@ -59,5 +59,12 @@ ul {
 
 .scores {
     display: flex;
+    gap: 100px;
+}
+
+.user-score, .computer-score {
+    display: flex;
     gap: 25px;
+    align-items: center;
+    font-size: large;
 }
